@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title Create New Author
+  body
+    .sidebar
+      button.sidebar-button#button1(onclick="location.href='/home'") Home
+      button.sidebar-button#button2(onclick="location.href='/books'") All Books
+      button.sidebar-button#button3(onclick="location.href='/authors'") All Authors
+      button.sidebar-button#button4(onclick="location.href='/create-author'") Create new author
+      button.sidebar-button#button5(onclick="location.href='/create-book'") Create new book
+    .main-content
+      h1 Create New Book
+      form(action="/create-book", method="POST")
+        label(for="title") Title:
+        input(type="text", name="title", id="title", required)
+
+        label(for="author") Author:
+        input(type="text", name="author", id="author", required)
+
+        label(for="summary") Summary:
+        input(type="text", name="summary", id="summary", required)
+
+        label(for="isbn") ISBN:
+        input(type="text", name="isbn", id="isbn")
+
+        button(type="submit") Submit
